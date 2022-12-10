@@ -7,7 +7,7 @@ const CardList = styled.FlatList`
     width: 100%;
     flex: 1;
     padding-left: 25px;
-    padding-botom: 15px;
+    padding-bottom: 15px;
 `;
 
 const CardSection: FunctionComponent<CardSectionProps> = (props) => {
