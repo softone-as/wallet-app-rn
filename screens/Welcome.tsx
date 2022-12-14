@@ -38,7 +38,12 @@ import BigText from '../components/Texts/BigText';
 import SmallText from '../components/Texts/SmallText';
 import RegularButton from '../components/Buttons/RegularButton';
 
-const Welcome: FunctionComponent = () => {
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigators/RootStack';
+
+type Props = StackScreenProps<RootStackParamList, 'Welcome'>;
+
+const Welcome: FunctionComponent<Props> = ({ navigation }) => {
     return (
         <>
             <StatusBar style='light' />
@@ -56,7 +61,7 @@ const Welcome: FunctionComponent = () => {
                     </SmallText>
                     <RegularButton
                         onPress={() => {
-                            alert('Get Started');
+                            navigation.navigate('Home');
                         }}
                     >
                         Get Started

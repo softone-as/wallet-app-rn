@@ -13,6 +13,7 @@ const SendMoneyItemContainer = styled.TouchableHighlight`
     padding: 10px;
     border-radius: 15px;
     justify-content: space-around;
+    margin: 0px 10px 10px 0px;
 `;
 
 const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {

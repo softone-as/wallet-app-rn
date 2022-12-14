@@ -14,13 +14,18 @@ import portrait3 from '../assets/portraits/3.jpg';
 import TransactionSection from '../components/Transactions/TransactionSection';
 import SendMoneySection from '../components/SendMoney/SendMoneySection';
 
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigators/RootStack';
+
+export type Props = StackScreenProps<RootStackParamList, 'Home'>;
+
 const HomeContainer = styled(Container)`
     background-color: ${colors.graylight};
     width: 100%;
     flex: 1;
 `;
 
-const Home: FunctionComponent = () => {
+const Home: FunctionComponent<Props> = () => {
     const cardData = [
         {
             id: 1,

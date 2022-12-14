@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 import { FunctionComponent } from 'react';
 import styled from 'styled-components/native';
 import RegularButton from '../Buttons/RegularButton';
@@ -10,9 +11,16 @@ const ButtonSectionBackground = styled.View`
 `;
 
 const ButtonSection: FunctionComponent = () => {
+    const navigation = useNavigation();
+
     return (
         <ButtonSectionBackground>
-            <RegularButton btnStyles={{ width: '50%' }} onPress={() => {}}>
+            <RegularButton
+                btnStyles={{ width: '50%' }}
+                onPress={() => {
+                    navigation.goBack();
+                }}
+            >
                 Cancel <Ionicons name='card' />
             </RegularButton>
         </ButtonSectionBackground>

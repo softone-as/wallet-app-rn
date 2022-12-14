@@ -54,7 +54,7 @@ const RootStack: FunctionComponent = () => {
                         />
                     ),
                 }}
-                initialRouteName='Balance'
+                initialRouteName='Welcome'
             >
                 <Stack.Screen
                     name='Welcome'
