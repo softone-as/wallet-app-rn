@@ -16,9 +16,11 @@ import Welcome from '../screens/Welcome';
 import Balance from '../screens/Balance';
 import { CardProps } from '../components/Cards/types';
 import { Ionicons } from '@expo/vector-icons';
+import Login from '../screens/Login';
 
 export type RootStackParamList = {
     Welcome: undefined;
+    Login: undefined;
     Home: undefined;
     Balance: CardProps;
 };
@@ -59,6 +61,11 @@ const RootStack: FunctionComponent = () => {
                 <Stack.Screen
                     name='Welcome'
                     component={Welcome}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name='Login'
+                    component={Login}
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen

@@ -61,7 +61,7 @@ const Welcome: FunctionComponent<Props> = ({ navigation }) => {
                     </SmallText>
                     <RegularButton
                         onPress={() => {
-                            navigation.navigate('Home');
+                            navigation.navigate('Login');
                         }}
                     >
                         Get Started
